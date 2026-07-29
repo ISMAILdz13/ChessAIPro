@@ -1,48 +1,7 @@
 <div align="center">
 
 <!-- Animated Chess Banner -->
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="160" viewBox="0 0 680 160">
-  <defs>
-    <linearGradient id="chessBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1">
-        <animate attributeName="offset" values="0;0.5;0" dur="4s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1">
-        <animate attributeName="offset" values="1;0.5;1" dur="4s" repeatCount="indefinite"/>
-      </stop>
-    </linearGradient>
-    <filter id="chessGlow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-  </defs>
-  <rect width="680" height="160" rx="25" fill="url(#chessBg)"/>
-  <!-- Chess pieces -->
-  <text x="80" y="80" font-size="48" text-anchor="middle" fill="white" opacity="0.3">♞</text>
-  <text x="600" y="100" font-size="42" text-anchor="middle" fill="white" opacity="0.25">♜</text>
-  <text x="340" y="65" font-family="monospace" font-size="28" font-weight="bold" fill="white" text-anchor="middle" filter="url(#chessGlow)">CHESS AI PRO</text>
-  <text x="340" y="98" font-family="monospace" font-size="14" fill="white" text-anchor="middle" opacity="0.9">Minimax Engine | Glassmorphism UI | Zero Dependencies</text>
-  <!-- Animated particles -->
-  <circle cx="60" cy="40" r="6" fill="white" opacity="0.4">
-    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2s" repeatCount="indefinite"/>
-    <animate attributeName="r" values="6;10;6" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="620" cy="120" r="5" fill="white" opacity="0.3">
-    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="1.5s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="160" cy="130" r="4" fill="white" opacity="0.35">
-    <animate attributeName="opacity" values="0.35;0.8;0.35" dur="3s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="520" cy="45" r="5" fill="white" opacity="0.3">
-    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.5s" repeatCount="indefinite"/>
-    <animate attributeName="r" values="5;8;5" dur="2.5s" repeatCount="indefinite"/>
-  </circle>
-  <rect x="170" y="120" width="340" height="3" rx="1.5" fill="white" opacity="0.15">
-    <animate attributeName="width" values="100;340;100" dur="5s" repeatCount="indefinite"/>
-    <animate attributeName="x" values="270;170;270" dur="5s" repeatCount="indefinite"/>
-  </rect>
-</svg>
+![](assets/banner.svg)
 
 <!-- Badges -->
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
@@ -54,15 +13,7 @@
 <img src="https://img.shields.io/github/stars/ISMAILdz13/chess-ai-pro?style=for-the-badge" alt="Stars"/>
 
 <!-- Animated Status -->
-<svg xmlns="http://www.w3.org/2000/svg" width="170" height="28" viewBox="0 0 170 28">
-  <rect width="170" height="28" rx="14" fill="#2D2D2D" stroke="#6366f1" stroke-width="1.5">
-    <animate attributeName="stroke" values="#6366f1;#ec4899;#6366f1" dur="3s" repeatCount="indefinite"/>
-  </rect>
-  <circle cx="14" cy="14" r="5" fill="#6366f1">
-    <animate attributeName="r" values="5;7;5" dur="1.5s" repeatCount="indefinite"/>
-  </circle>
-  <text x="30" y="18" font-family="monospace" font-size="10" fill="#6366f1" font-weight="bold">GAME READY</text>
-</svg>
+![](assets/status-badge.svg)
 
 </div>
 
@@ -206,36 +157,7 @@ python3 -m http.server 8000
 | Grandmaster | 5 | ~5-15s | Maximum difficulty |
 
 <!-- Difficulty visualization SVG -->
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="120" viewBox="0 0 600 120">
-  <defs>
-    <linearGradient id="diffGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#43e97b"/>
-      <stop offset="25%" style="stop-color:#4facfe"/>
-      <stop offset="50%" style="stop-color:#f093fb"/>
-      <stop offset="75%" style="stop-color:#FF4B2B"/>
-      <stop offset="100%" style="stop-color:#f5576c"/>
-    </linearGradient>
-  </defs>
-  <!-- Bar chart -->
-  <rect x="20" y="80" width="80" height="20" rx="4" fill="#43e97b" opacity="0.9"/>
-  <text x="60" y="75" font-family="monospace" font-size="9" fill="#43e97b" text-anchor="middle">Depth 2</text>
-
-  <rect x="130" y="65" width="80" height="35" rx="4" fill="#4facfe" opacity="0.9"/>
-  <text x="170" y="60" font-family="monospace" font-size="9" fill="#4facfe" text-anchor="middle">Depth 3</text>
-
-  <rect x="240" y="50" width="80" height="50" rx="4" fill="#f093fb" opacity="0.9"/>
-  <text x="280" y="45" font-family="monospace" font-size="9" fill="#f093fb" text-anchor="middle">Depth 4</text>
-
-  <rect x="350" y="35" width="80" height="65" rx="4" fill="#FF4B2B" opacity="0.9"/>
-  <text x="390" y="30" font-family="monospace" font-size="9" fill="#FF4B2B" text-anchor="middle">Depth 4+</text>
-
-  <rect x="460" y="20" width="80" height="80" rx="4" fill="#f5576c" opacity="0.9">
-    <animate attributeName="opacity" values="0.9;0.6;0.9" dur="2s" repeatCount="indefinite"/>
-  </rect>
-  <text x="500" y="15" font-family="monospace" font-size="9" fill="#f5576c" text-anchor="middle">Depth 5</text>
-
-  <text x="300" y="115" font-family="monospace" font-size="8" fill="#666" text-anchor="middle">Thinking Time &amp; Difficulty Scale</text>
-</svg>
+![](assets/footer.svg)
 
 </div>
 
@@ -294,66 +216,7 @@ Score = Σ(material_value[piece] + piece_square_table[piece][square])
 
 <div align="center">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="300" viewBox="0 0 640 300">
-  <defs>
-    <linearGradient id="archG1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#6366f1"/><stop offset="100%" style="stop-color:#8b5cf6"/>
-    </linearGradient>
-    <linearGradient id="archG2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#ec4899"/><stop offset="100%" style="stop-color:#f5576c"/>
-    </linearGradient>
-    <linearGradient id="archG3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#4facfe"/><stop offset="100%" style="stop-color:#00f2fe"/>
-    </linearGradient>
-    <filter id="archS"><feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.3"/></filter>
-    <marker id="archA" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-
-  <text x="320" y="25" font-family="monospace" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">Chess AI Pro Architecture</text>
-
-  <!-- UI Layer -->
-  <rect x="30" y="50" width="160" height="60" rx="12" fill="url(#archG1)" filter="url(#archS)"/>
-  <text x="110" y="78" font-family="monospace" font-size="11" fill="white" text-anchor="middle" font-weight="bold">UI Layer</text>
-  <text x="110" y="95" font-family="monospace" font-size="8" fill="white" text-anchor="middle">Glassmorphism + CSS</text>
-
-  <!-- Chess Engine -->
-  <rect x="240" y="50" width="160" height="60" rx="12" fill="url(#archG2)" filter="url(#archS)"/>
-  <text x="320" y="78" font-family="monospace" font-size="11" fill="white" text-anchor="middle" font-weight="bold">Chess Engine</text>
-  <text x="320" y="95" font-family="monospace" font-size="8" fill="white" text-anchor="middle">Rules + Validation</text>
-
-  <!-- AI Engine -->
-  <rect x="450" y="50" width="160" height="60" rx="12" fill="url(#archG3)" filter="url(#archS)"/>
-  <text x="530" y="78" font-family="monospace" font-size="11" fill="white" text-anchor="middle" font-weight="bold">AI Engine</text>
-  <text x="530" y="95" font-family="monospace" font-size="8" fill="white" text-anchor="middle">Minimax + Pruning</text>
-
-  <!-- Arrows -->
-  <line x1="190" y1="80" x2="235" y2="80" stroke="#666" stroke-width="2" marker-end="url(#archA)"/>
-  <line x1="400" y1="80" x2="445" y2="80" stroke="#666" stroke-width="2" marker-end="url(#archA)"/>
-
-  <!-- Evaluation -->
-  <rect x="240" y="160" width="160" height="50" rx="12" fill="#2D2D2D" stroke="#ec4899" stroke-width="1.5" filter="url(#archS)">
-    <animate attributeName="stroke" values="#ec4899;#6366f1;#ec4899" dur="2s" repeatCount="indefinite"/>
-  </rect>
-  <text x="320" y="190" font-family="monospace" font-size="11" fill="#ec4899" text-anchor="middle" font-weight="bold">Evaluation</text>
-
-  <line x1="530" y1="110" x2="380" y2="160" stroke="#666" stroke-width="1.5" marker-end="url(#archA)" stroke-dasharray="4,3"/>
-
-  <!-- Persistence -->
-  <rect x="30" y="160" width="160" height="50" rx="12" fill="#2D2D2D" stroke="#4facfe" stroke-width="1.5" filter="url(#archS)"/>
-  <text x="110" y="190" font-family="monospace" font-size="11" fill="#4facfe" text-anchor="middle" font-weight="bold">localStorage</text>
-
-  <line x1="110" y1="110" x2="110" y2="155" stroke="#666" stroke-width="1.5" marker-end="url(#archA)"/>
-
-  <!-- Output -->
-  <rect x="200" y="250" width="240" height="35" rx="10" fill="#2D2D2D" stroke="#43e97b" stroke-width="1.5">
-    <animate attributeName="stroke" values="#43e97b;#4facfe;#43e97b" dur="2s" repeatCount="indefinite"/>
-  </rect>
-  <text x="320" y="272" font-family="monospace" font-size="11" fill="#43e97b" text-anchor="middle" font-weight="bold">✓ Best Move Selected</text>
-
-  <line x1="320" y1="210" x2="320" y2="245" stroke="#666" stroke-width="2" marker-end="url(#archA)"/>
-</svg>
+![](assets/architecture.svg)
 
 </div>
 
@@ -461,20 +324,7 @@ MIT License — see [LICENSE](LICENSE) file.
 
 <div align="center">
 
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="50" viewBox="0 0 500 50">
-  <defs>
-    <linearGradient id="chessFooter" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0">
-        <animate attributeName="offset" values="0;1;0" dur="5s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:0">
-        <animate attributeName="offset" values="1;0;1" dur="5s" repeatCount="indefinite"/>
-      </stop>
-    </linearGradient>
-  </defs>
-  <rect x="30" y="20" width="440" height="2" rx="1" fill="url(#chessFooter)"/>
-  <text x="250" y="42" font-family="monospace" font-size="10" fill="#666" text-anchor="middle">Pure vanilla JS | No frameworks | No dependencies | Single file | by ISMAILdz13</text>
-</svg>
+![](assets/footer-1.svg)
 
 ⭐ **Star this repo if you like it!** ⭐
 

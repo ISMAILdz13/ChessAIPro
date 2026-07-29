@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="170" height="28" viewBox="0 0 170 28">
+  <rect width="170" height="28" rx="14" fill="#2D2D2D" stroke="#6366f1" stroke-width="1.5">
+    <animate attributeName="stroke" values="#6366f1;#ec4899;#6366f1" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <circle cx="14" cy="14" r="5" fill="#6366f1">
+    <animate attributeName="r" values="5;7;5" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="30" y="18" font-family="monospace" font-size="10" fill="#6366f1" font-weight="bold">GAME READY</text>
+</svg>

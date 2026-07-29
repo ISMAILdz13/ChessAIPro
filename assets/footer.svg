@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="120" viewBox="0 0 600 120">
+  <defs>
+    <linearGradient id="diffGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#43e97b"/>
+      <stop offset="25%" style="stop-color:#4facfe"/>
+      <stop offset="50%" style="stop-color:#f093fb"/>
+      <stop offset="75%" style="stop-color:#FF4B2B"/>
+      <stop offset="100%" style="stop-color:#f5576c"/>
+    </linearGradient>
+  </defs>
+  <!-- Bar chart -->
+  <rect x="20" y="80" width="80" height="20" rx="4" fill="#43e97b" opacity="0.9"/>
+  <text x="60" y="75" font-family="monospace" font-size="9" fill="#43e97b" text-anchor="middle">Depth 2</text>
+
+  <rect x="130" y="65" width="80" height="35" rx="4" fill="#4facfe" opacity="0.9"/>
+  <text x="170" y="60" font-family="monospace" font-size="9" fill="#4facfe" text-anchor="middle">Depth 3</text>
+
+  <rect x="240" y="50" width="80" height="50" rx="4" fill="#f093fb" opacity="0.9"/>
+  <text x="280" y="45" font-family="monospace" font-size="9" fill="#f093fb" text-anchor="middle">Depth 4</text>
+
+  <rect x="350" y="35" width="80" height="65" rx="4" fill="#FF4B2B" opacity="0.9"/>
+  <text x="390" y="30" font-family="monospace" font-size="9" fill="#FF4B2B" text-anchor="middle">Depth 4+</text>
+
+  <rect x="460" y="20" width="80" height="80" rx="4" fill="#f5576c" opacity="0.9">
+    <animate attributeName="opacity" values="0.9;0.6;0.9" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <text x="500" y="15" font-family="monospace" font-size="9" fill="#f5576c" text-anchor="middle">Depth 5</text>
+
+  <text x="300" y="115" font-family="monospace" font-size="8" fill="#666" text-anchor="middle">Thinking Time &amp; Difficulty Scale</text>
+</svg>

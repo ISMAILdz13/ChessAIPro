@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="160" viewBox="0 0 680 160">
+  <defs>
+    <linearGradient id="chessBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1">
+        <animate attributeName="offset" values="0;0.5;0" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#ec4899;stop-opacity:1">
+        <animate attributeName="offset" values="1;0.5;1" dur="4s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <filter id="chessGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="680" height="160" rx="25" fill="url(#chessBg)"/>
+  <!-- Chess pieces -->
+  <text x="80" y="80" font-size="48" text-anchor="middle" fill="white" opacity="0.3">♞</text>
+  <text x="600" y="100" font-size="42" text-anchor="middle" fill="white" opacity="0.25">♜</text>
+  <text x="340" y="65" font-family="monospace" font-size="28" font-weight="bold" fill="white" text-anchor="middle" filter="url(#chessGlow)">CHESS AI PRO</text>
+  <text x="340" y="98" font-family="monospace" font-size="14" fill="white" text-anchor="middle" opacity="0.9">Minimax Engine | Glassmorphism UI | Zero Dependencies</text>
+  <!-- Animated particles -->
+  <circle cx="60" cy="40" r="6" fill="white" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="6;10;6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="620" cy="120" r="5" fill="white" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="160" cy="130" r="4" fill="white" opacity="0.35">
+    <animate attributeName="opacity" values="0.35;0.8;0.35" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="520" cy="45" r="5" fill="white" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="5;8;5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <rect x="170" y="120" width="340" height="3" rx="1.5" fill="white" opacity="0.15">
+    <animate attributeName="width" values="100;340;100" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="x" values="270;170;270" dur="5s" repeatCount="indefinite"/>
+  </rect>
+</svg>
