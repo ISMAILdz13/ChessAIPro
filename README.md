@@ -10,7 +10,7 @@
 <img src="https://img.shields.io/badge/Dependencies-Zero-success?style=for-the-badge" alt="No Dependencies"/>
 <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License"/>
 <img src="https://img.shields.io/badge/Single%20File-100%25-blueviolet?style=for-the-badge" alt="Single File"/>
-<img src="https://img.shields.io/github/stars/ISMAILdz13/chess-ai-pro?style=for-the-badge" alt="Stars"/>
+<img src="https://img.shields.io/github/stars/ISMAILdz13/ChessAIPro?style=for-the-badge" alt="Stars"/>
 
 <!-- Animated Status -->
 ![](assets/status-badge.svg)
@@ -76,7 +76,7 @@ The game features a **minimax algorithm with alpha-beta pruning** for the AI, a 
 
 ```bash
 # Clone the repo
-git clone https://github.com/ISMAILdz13/chess-ai-pro.git
+git clone https://github.com/ISMAILdz13/ChessAIPro.git
 cd chess-ai-pro
 
 # Option 1: Just open index.html in your browser
@@ -310,7 +310,7 @@ The evaluation bar shows the relative position strength. A full bar pointing tow
 ## 👤 Credits
 
 - **Developer**: ISMAILdz13 (@ISMAILdz13)
-- **Repository**: [github.com/ISMAILdz13/chess-ai-pro](https://github.com/ISMAILdz13/chess-ai-pro)
+- **Repository**: [github.com/ISMAILdz13/ChessAIPro](https://github.com/ISMAILdz13/ChessAIPro)
 - **Chess Engine**: Custom implementation embedded in `index.html`
 - **AI Algorithm**: Minimax with alpha-beta pruning
 
