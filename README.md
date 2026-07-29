@@ -1,196 +1,156 @@
-# ♟️ Chess Pro - AI Chess Game
+<div align="center">
 
-A beautiful, interactive chess game with AI opponent built with vanilla HTML, CSS, and JavaScript. Features a modern glassmorphism UI, real-time AI engine, and smooth animations.
+<!-- Animated Chess Banner SVG -->
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="140" viewBox="0 0 600 140">
+  <defs>
+    <linearGradient id="chessGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7F00FF;stop-opacity:1">
+        <animate attributeName="offset" values="0;0.5;0" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#E100FF;stop-opacity:1">
+        <animate attributeName="offset" values="1;0.5;1" dur="4s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <filter id="chessGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="600" height="140" rx="20" fill="url(#chessGrad)"/>
+  <!-- Chess pieces -->
+  <text x="120" y="70" font-size="42" text-anchor="middle">♞</text>
+  <text x="300" y="65" font-family="monospace" font-size="26" font-weight="bold" fill="white" text-anchor="middle" filter="url(#chessGlow)">CHESS AI PRO</text>
+  <text x="300" y="95" font-family="monospace" font-size="13" fill="white" text-anchor="middle" opacity="0.9">Minimax Engine | Glassmorphism UI | Vanilla JS</text>
+  <text x="480" y="70" font-size="42" text-anchor="middle">♜</text>
+  <!-- Animated pieces -->
+  <circle cx="80" cy="100" r="5" fill="white" opacity="0.4">
+    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="520" cy="100" r="4" fill="white" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>
 
-## 🎮 Features
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
+<img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License"/>
+<img src="https://img.shields.io/badge/No%20Dependencies-zero-green?style=for-the-badge" alt="No Dependencies"/>
 
-### Core Gameplay
-- **Full Chess Implementation** - Complete chess rules including castling, en passant, and pawn promotion
-- **AI Opponent** - Intelligent minimax algorithm with configurable difficulty levels
-- **Move Highlighting** - Visual feedback showing selected pieces and available moves
-- **Move History** - Click-through game history to review past moves
-- **Undo Functionality** - Undo moves (single or dual moves depending on AI mode)
+<!-- Animated Status Badge -->
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="28" viewBox="0 0 160 28">
+  <rect width="160" height="28" rx="14" fill="#2D2D2D" stroke="#7F00FF" stroke-width="1.5">
+    <animate attributeName="stroke" values="#7F00FF;#E100FF;#7F00FF" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <circle cx="14" cy="14" r="5" fill="#E100FF">
+    <animate attributeName="r" values="5;7;5" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <text x="30" y="18" font-family="monospace" font-size="10" fill="#E100FF" font-weight="bold">GAME READY</text>
+</svg>
 
-### UI/UX Features
-- **Modern Design** - Liquid glass morphism aesthetic with gradient accents
-- **Responsive Layout** - Works on desktop and mobile devices
-- **Board Flip** - Rotate the board 180° for different perspectives
-- **Material Count** - Track captured pieces and material advantage
-- **Evaluation Bar** - Real-time position evaluation display
-- **Audio Feedback** - Sound effects for moves, captures, and checks
-- **Accessibility** - ARIA labels and keyboard navigation support
+</div>
 
-### Game Settings
-- **Difficulty Levels**
-  - Beginner (Depth 2)
-  - Intermediate (Depth 3) - Default
-  - Advanced (Depth 4)
-  - Master (Depth 4+)
-  - Grandmaster (Depth 5 - Slow)
-- **AI Toggle** - Play as white/black or disable AI for two-player mode
-- **Game Persistence** - Auto-saves game to browser localStorage
+---
+
+## ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| ♟️ **Full Chess Engine** | Complete rules — castling, en passant, pawn promotion |
+| 🤖 **AI Opponent** | Minimax algorithm with 5 difficulty levels |
+| 🎨 **Glassmorphism UI** | Modern liquid-glass aesthetic with gradient accents |
+| 📱 **Responsive** | Works on desktop, tablet, and mobile |
+| ↩️ **Undo** | Take back moves (single or dual) |
+| 📊 **Evaluation Bar** | Real-time position strength display |
+| 🔊 **Sound Effects** | Audio feedback for moves, captures, checks |
+| 💾 **Auto-Save** | Game persists in browser localStorage |
+| 🔄 **Board Flip** | Rotate 180° for different perspectives |
+| ♿ **Accessible** | ARIA labels and keyboard navigation |
+
+---
+
+## 🎯 Difficulty Levels
+
+| Level | Search Depth | Speed |
+|-------|-------------|-------|
+| Beginner | 2 | Instant |
+| Intermediate (default) | 3 | Fast |
+| Advanced | 4 | ~1s |
+| Master | 4+ | ~2-3s |
+| Grandmaster | 5 | Slow (~5-10s) |
+
+---
 
 ## 🚀 Quick Start
 
 ### Requirements
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- No external dependencies required
+- Any modern web browser (Chrome, Firefox, Safari, Edge)
+- **No dependencies required** — pure vanilla JS/HTML/CSS
 
-### Usage
-1. Open `index.html` in your web browser
-2. Click on a piece to select it
-3. Click on a highlighted square to move
-4. The AI will automatically respond (if enabled)
+### Run
+```bash
+# Clone
+git clone https://github.com/ISMAILdz13/chess-ai-pro.git
+cd chess-ai-pro
 
-## 🎯 Game Controls
-
-| Control | Action |
-|---------|--------|
-| Click Square | Select piece / Make move |
-| New Game | Reset to starting position |
-| 🤖 AI Toggle | Enable/Disable AI opponent |
-| ↩️ Undo | Undo last move(s) |
-| 🔄 Flip | Rotate board 180° |
-| Difficulty | Change AI search depth |
-
-## 🧠 AI Engine
-
-### Algorithm
-- **Minimax with Alpha-Beta Pruning** - Efficient game tree search
-- **Piece-Square Tables** - Evaluates piece positioning
-- **Material Evaluation** - Assigns values to pieces (♟=1, ♞=3, ♗=3, ♖=5, ♕=9)
-
-### Configuration
-```javascript
-weights: {
-  p: 100,   // Pawn
-  n: 320,   // Knight
-  b: 330,   // Bishop
-  r: 500,   // Rook
-  q: 900,   // Queen
-  k: 20000  // King
-}
+# Just open index.html in your browser
+# Or use a local server:
+python3 -m http.server 8000
+# Then visit http://localhost:8000
 ```
-
-## 🎨 Design Highlights
-
-### Color Scheme
-- **Primary Gradient** - Cyan to Blue (#00d2ff → #3a7bd5)
-- **Board Squares** - Light (#94a3b8) and Dark (#334155)
-- **Accent Color** - Cyan (#00e5ff)
-- **Background** - Deep space gradient with radial blurs
-
-### Visual Effects
-- **Glassmorphism** - 12px backdrop blur with transparency
-- **Smooth Animations** - 350ms cubic-bezier transitions
-- **Piece Movement** - Fluid positioning updates
-- **Drop Shadows** - Depth and layering effects
-
-## 💾 Storage
-
-Game data is automatically saved to browser localStorage:
-```json
-{
-  "pgn": "1.e4 e5 2.Nf3...",
-  "aiEnabled": true,
-  "isFlipped": false,
-  "difficulty": "2"
-}
-```
-
-## 🔊 Audio System
-
-Three sound effects powered by Web Audio API:
-- **Move** - 400Hz sine wave (100ms)
-- **Capture** - 200Hz square wave (100ms)
-- **Check** - 600Hz to 800Hz sweep (200ms)
-
-## 📱 Responsive Design
-
-The game adapts to different screen sizes:
-- **Desktop** - Side-by-side layout (board + info panel)
-- **Tablet/Mobile** - Stacked vertical layout
-- **Minimum** - 320px width support
-
-## 🔧 Technical Details
-
-### Technologies
-- **Chess Logic** - Chess.js library (bundled and minified)
-- **Graphics** - SVG piece graphics with drop shadows
-- **Performance** - Web Workers for AI computation
-- **Styling** - Pure CSS with CSS variables for theming
-
-### Browser Compatibility
-- ✅ Chrome/Chromium (v80+)
-- ✅ Firefox (v74+)
-- ✅ Safari (v13+)
-- ✅ Edge (v80+)
-
-## 📋 File Structure
-
-```
-Chess/
-├── index.html          # Main game file (HTML + CSS + JS)
-└── README.md          # Documentation
-```
-
-## 🎓 How to Customize
-
-### Change Colors
-Edit CSS variables in the `<style>` section:
-```css
-:root {
-  --accent-color: #00e5ff;  /* Change accent color */
-  --board-light: #94a3b8;   /* Light squares */
-  --board-dark: #334155;    /* Dark squares */
-}
-```
-
-### Adjust AI Difficulty
-Modify depth mappings in `CHESS_CONFIG`:
-```javascript
-depths: { 1: 2, 2: 3, 3: 4, 4: 4, 5: 5 }
-```
-
-### Change Animation Speed
-```javascript
-animationSpeed: 350  // milliseconds
-```
-
-## ⚙️ Browser APIs Used
-
-- **Web Audio API** - Sound effects
-- **Web Workers** - Background AI computation
-- **localStorage** - Game persistence
-- **CSS Grid & Flexbox** - Layout
-- **CSS Backdrop Filter** - Glassmorphism effect
-
-## 📝 License
-
-Open source - Feel free to use, modify, and distribute.
-
-## 🐛 Known Limitations
-
-- AI search depth is limited by browser performance
-- Grandmaster difficulty may cause noticeable delay (2-5 seconds)
-- Some older browsers may not support all CSS features
-
-## 🎯 Future Improvements
-
-Potential enhancements:
-- [ ] Online multiplayer support
-- [ ] Move validation with standard notation input
-- [ ] Endgame tablebases
-- [ ] Opening book integration
-- [ ] Chess engine integration (Stockfish)
-- [ ] Game export (PGN/FEN)
-- [ ] Dark mode toggle
-- [ ] Mobile app version
-
-## 📧 Support
-
-For issues or suggestions, please create an issue in the repository.
 
 ---
 
-**Enjoy the game! ♟️**
+## 🎮 Controls
+
+| Control | Action |
+|---------|--------|
+| Click piece | Select |
+| Click highlighted square | Move |
+| New Game | Reset to start position |
+| 🤖 AI Toggle | Enable/disable AI |
+| ↩️ Undo | Undo last move(s) |
+| 🔄 Flip | Rotate board 180° |
+
+---
+
+## 📁 Project Structure
+```
+chess-ai-pro/
+├── index.html    # Single-file app (HTML + CSS + JS)
+├── README.md
+└── LICENSE
+```
+
+---
+
+## 🔧 How the AI Works
+
+The AI uses the **minimax algorithm** with alpha-beta pruning:
+
+1. **Generate all legal moves** for the current position
+2. **Search ahead** to the configured depth (2-5 moves)
+3. **Evaluate** each leaf position (material + positional heuristics)
+4. **Backpropagate** scores through the tree
+5. **Select** the move with the best minimax value
+
+---
+
+## 📜 License
+
+MIT License — see [LICENSE](LICENSE) file.
+
+---
+
+<div align="center">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="40" viewBox="0 0 400 40">
+  <rect x="50" y="18" width="300" height="2" rx="1" fill="#7F00FF" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <text x="200" y="33" font-family="monospace" font-size="10" fill="#666" text-anchor="middle">Made with vanilla JS | No frameworks | No dependencies</text>
+</svg>
+
+⭐ **Star this repo if you like it!** ⭐
+
+</div>
