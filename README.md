@@ -77,7 +77,7 @@ The game features a **minimax algorithm with alpha-beta pruning** for the AI, a 
 ```bash
 # Clone the repo
 git clone https://github.com/ISMAILdz13/ChessAIPro.git
-cd chess-ai-pro
+cd ChessAIPro
 
 # Option 1: Just open index.html in your browser
 open index.html        # macOS
@@ -232,11 +232,12 @@ Score = Σ(material_value[piece] + piece_square_table[piece][square])
 ## 📁 Project Structure
 
 ```
-chess-ai-pro/
-├── index.html    # Single-file app — all HTML, CSS, and JS
-├── README.md     # This file
-├── LICENSE        # MIT License
-└── .gitignore
+ChessAIPro/
+├── assets/       # SVG graphics, banners, and icons
+├── index.html    # Single-file app — HTML, CSS, JS engine
+├── .gitignore    # Ignore configuration for Git
+├── LICENSE       # MIT License
+└── README.md     # Project documentation
 ```
 
 > **Everything is in one file.** The chess engine, AI logic, UI, styling, and sound effects are all embedded in `index.html`. No build step, no dependencies, no npm install.
